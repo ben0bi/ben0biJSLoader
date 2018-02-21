@@ -5,9 +5,11 @@
 # ben0biJSLoader
 Load all your JS files from a single JSON file.
 
+Intended to be used when several html pages need the same chunk of JS-files.
+
 I don't really get how Require.js works. Instead of learning it, I wrote my own JS loader.
 You can put all your JS-files (names & path) in a single JSON file and load them into each of your pages with one command.
-No PHP and jQuery is needed - I made it work without jQuery so you can load it along with the other files.
+No PHP and jQuery is needed - I made it work without jQuery so you can load it (jQuery) along with the other files.
 
 It simply loads the filenames and adds some SCRIPT tags to the HEAD tag of your page.
 
@@ -33,6 +35,7 @@ In your page, just load this script and call the loader. See example below.
    "//":0  
 }  
 
+##### Loading it:
 After that, you only need to call the loader with the right path and your main function.  
 You NEED to put your code into a main function, whereelse it will try to execute it before all the stuff is loaded.  
 
