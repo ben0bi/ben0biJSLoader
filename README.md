@@ -12,16 +12,14 @@ No PHP and jQuery is needed - I made it work without jQuery so you can load it a
 It simply loads the filenames and adds some SCRIPT tags to the HEAD tag of your page.
 
 ## Usage:
-Create a JSON file with a one-level structure.
+Create a JSON file with a one-level structure.  
+The key values do not matter except for "//" which is a comment.  
+The last entry should be "//":0 so the comment key will be cleared.  
+In your page, just load this script and call the loader. See example below.  
 
-The key values do not matter except for "//" which is a comment.
+## Example:
 
-The last entry should be "//":0 so the comment key will be cleared.
-
-In your page, just load this script and call the loader. See example below.
-
-### Example:
-
+#### JSON File:
 {  
    "//": "Those are my files and this is a comment..",  
    
@@ -38,8 +36,8 @@ In your page, just load this script and call the loader. See example below.
 After that, you only need to call the loader with the right path and your main function.  
 You NEED to put your code into a main function, whereelse it will try to execute it before all the stuff is loaded.  
 
-<script src="js/ben0biJSLoader.js"></script>  
-<script>  
+&lt;script src="js/ben0biJSLoader.js"&gt;&lt;/script&gt;  
+&lt;script&gt;  
   
 function main()  
 {  
@@ -47,6 +45,6 @@ function main()
 }  
 
 ben0biJSLoader.recursiveLoad('config/mypaths.json', main);  
-</script>  
+&lt;/script&gt;  
 
 Aaaaand...it should work.
