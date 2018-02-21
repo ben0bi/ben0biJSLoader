@@ -26,8 +26,8 @@ In your page, just load this script and call the loader. See example below.
    "JQUERY": "js/jquery.min.js",  
    "SomeLib": "js/mylib_01.js",  
    
-   "//": "Assume Lib2 depends SomeLib and both depend on jQuery.", 
-   "//": The File order is important, not the keys!",
+   "//": "Assume Lib2 depends SomeLib and both depend on jQuery.",  
+   "//": The File order is important, not the keys!",  
    "Lib2": "js/mylib_02.js",  
    
    "//":0  
