@@ -1,0 +1,8 @@
+{
+	"name": "ben0bienterprises/ben0biJSLoader",
+	"autoload": {
+		"psr-4": {
+			"" : ""
+		} 
+	}
+}

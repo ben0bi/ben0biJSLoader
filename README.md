@@ -1,7 +1,3 @@
-
-
-[CODE FOLLOWS]
-
 # ben0biJSLoader
 Load all your JS files from a single JSON file.
 
@@ -51,3 +47,29 @@ ben0biJSLoader.recursiveLoad('config/mypaths.json', main);
 &lt;/script&gt;  
 
 Aaaaand...it should work.
+
+## COMPOSER
+To download the ben0biJSLoader into your project with composer, add those lines to your composer.json:
+
+{
+	...	
+
+    "repositories": [
+
+	...,
+
+        {
+            "type": "vcs",
+            "url": "https://github.com/ben0bi/ben0biJSLoader.git"
+        }
+    ],
+    "require": {
+	...,
+        "ben0bienterprises/ben0biJSLoader" : "dev-master@dev"
+    },
+
+	...
+}
+
+Now you can load the ben0biJSLoader by typing "composer update" into your console.
+
