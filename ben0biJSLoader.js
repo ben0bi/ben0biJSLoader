@@ -51,6 +51,7 @@ var ben0biJSLoader = function(configFilePath, asyncFunction)
 			if(larry[i]==val)
 			{
 				found = true;
+				break;
 			}
 		}
 
