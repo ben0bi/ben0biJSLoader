@@ -28,6 +28,7 @@ var ben0biJSLoader = function(configFilePath, asyncFunction)
 	var recLoadScript = function(json, recCount)
 	{
 		var val="";
+		var valkey=""; // NEW: use JSFILE_[key] as id of the script.
 		var cnt=0;
 
 		// get the right path with the index recCount.
@@ -35,8 +36,10 @@ var ben0biJSLoader = function(configFilePath, asyncFunction)
 		{
 		  	if(key!="//" && json.hasOwnProperty(key)) 
 		  	{
-				// val is the path.
+				// val(ue) is the path.
+				// key will be set as tag id.
 		    		val = json[key];
+				valkey = key;
 				if(cnt>=recCount)
 					break;
 				cnt++;
@@ -70,6 +73,7 @@ var ben0biJSLoader = function(configFilePath, asyncFunction)
 		{
 			rls(json, recCount);
 		};
+		script.id='JSFILE_'+valkey; // NEW: use the json key as id.
 		script.src=val;
 		document.head.appendChild(script);
 	};
