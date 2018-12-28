@@ -95,7 +95,7 @@ var ben0biJSLoader = function(configFilePath, asyncFunction)
 			{
         			if (xhr.status === 200) 
 				{
-					var json=JSON.parse(xhr.responseText);
+					var json=xhr.response;
 					var maxCount=0;
 					// count the paths
 					for (var key in json) 
@@ -114,6 +114,7 @@ var ben0biJSLoader = function(configFilePath, asyncFunction)
         		}
     		};
     		xhr.open("GET", m_configFilePath, true);
+		xhr.responseType = "json";
     		xhr.send();
 	};
 
