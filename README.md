@@ -2,6 +2,7 @@
 Load all your JS files from a single JSON file.
 
 Intended to be used when several html pages need the same chunk of JS-files.
+(These pages should reside in the same folder.)
 
 I don't really get how Require.js works. Instead of learning it, I wrote my own JS loader.
 You can put all your JS-files (names & path) in a single JSON file and load them into each of your pages with one command.
