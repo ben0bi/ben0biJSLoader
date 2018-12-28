@@ -10,6 +10,10 @@ No PHP and jQuery is needed - I made it work without jQuery so you can load it (
 
 It simply loads the filenames and adds some SCRIPT tags to the HEAD tag of your page.
 
+A script tag of a json key-value pair looks like this then:    
+<script id="JSFILE_[key]" src="[value]"></script>    
+where the values between the [ brackets ] will vary depending on the json file.    
+
 ## Usage:
 Create a JSON file with a one-level structure.  
 The key values do not matter except for "//" which is a comment.  
